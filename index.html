@@ -24,15 +24,16 @@
             var windowFeatures = "menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes";
 
             //window.open("http://www.cnn.com/", "CNN_WindowName", windowFeatures);
-            window.open("https://www.instagram.com/blake.purdue/");
+            
             document.getElementById("deviceTypeTitle").innerHTML = "Your device is a " + navigator.platform;
-            document.getElementById("wasSuccesfull").innerHTML = "Insta attempted";
+            
         }
         else{
             console.log("Not a mac");
             document.getElementById("deviceTypeTitle").innerHTML = "Your device is a " + navigator.platform;
         }
-        
+        window.open("https://www.instagram.com/blake.purdue/");
+        document.getElementById("wasSuccesfull").innerHTML = "Insta attempted";
     }
 </script>
 </html>
