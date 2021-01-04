@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Plateform code</title>
+</head>
+
+<body>
+    <h2> This is to learn how to open native web stuff</h2>
+    
+    <h2 id="deviceTypeTitle"> Click button to find out device type</h2>
+    <button onclick="giveInfo()">Click Me</button>
+</body>
+    
+<script>
+    function giveInfo(){
+        // Plateform is mac Laptop -1 = no . 0 = yes
+        if (navigator.platform.indexOf("MacIntel") == 0){
+            console.log("Device is mac");
+            
+            document.getElementById("deviceTypeTitle").innerHTML = "Your device is a " + navigator.platform;
+        }
+        else{
+            console.log("Not a mac");
+            document.getElementById("deviceTypeTitle").innerHTML = "Your device is a " + navigator.platform;
+        }
+        
+    }
+</script>
+</html>
