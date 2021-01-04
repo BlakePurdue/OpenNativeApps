@@ -10,6 +10,8 @@
     <h2> This is to learn how to open native web stuff</h2>
     
     <h2 id="deviceTypeTitle"> Click button to find out device type</h2>
+    
+    <h2 id="wasSuccesfull"> </h2>
     <button onclick="giveInfo()">Click Me</button>
 </body>
     
@@ -18,8 +20,13 @@
         // Plateform is mac Laptop -1 = no . 0 = yes
         if (navigator.platform.indexOf("MacIntel") == 0){
             console.log("Device is mac");
+            
+            var windowFeatures = "menubar=no,location=yes,resizable=yes,scrollbars=yes,status=yes";
+
+            //window.open("http://www.cnn.com/", "CNN_WindowName", windowFeatures);
             window.open("https://www.instagram.com/blake.purdue/");
             document.getElementById("deviceTypeTitle").innerHTML = "Your device is a " + navigator.platform;
+            document.getElementById("wasSuccesfull").innerHTML = "Insta attempted";
         }
         else{
             console.log("Not a mac");
